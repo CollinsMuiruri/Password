@@ -1,5 +1,5 @@
 import random
-from credentials import Credentials
+from info import Credentials
 
 def create_credentials(fname,lname,phone,email):
     '''
@@ -21,15 +21,15 @@ def display_credentials():
     return Credentials.display_credentials()
 
 def main():
-    print("We're here to save your credentials and as a bonus we even help with password generation.")
+    print("Welcome to password where you can save your credentials and retrieve them later.Please input your name")
 
     user_name = input()
 
-    print(f"Hello {user_name}. What are you here to do?")
+    print(f"Hello {user_name}.")
     print('\n')
 
     while True:
-        print("Use the following to navigate through the app: new - create new account,display - display contacts,pg - password generation,exit - if you wanna leave")
+        print("This will help you move around: new - creating a new account,display - viewing your contacts,Generate - generating a new password for you,EXIT - exiting the app")
         initials = input().lower()
 
         if initials =='new':
@@ -42,7 +42,7 @@ def main():
             print("Enter your last name")
             l_name = input()
 
-            print("Enter your mobile phone number")
+            print("Input your phone number")
             p_number = input()
 
             print("Enter your email address")
@@ -57,7 +57,7 @@ def main():
         elif initials == 'display':
 
             if display_credentials():
-                print("Here are your currently saved credentials.")
+                print("Here are your up-to-date credentials.")
                 print('\n')
                 for credentials in display_credentials():
                     print(f"{credentials.first_name} {credentials.last_name}...{credentials.number}")
@@ -67,11 +67,11 @@ def main():
                     print("No more accounts")
                     print ('\n')
 
-        elif initials == 'pg':
+        elif initials == 'generate':
 
                 choices = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ?()@#$%^&*!"
                 length = len(choices)
-                print("Give the length to your password")
+                print("Give the preferred length to your password")
                 lent = int(input())
                 password = "".join(random.sample(choices,lent ))
                 print ('\n')
@@ -80,11 +80,11 @@ def main():
 
         elif initials == 'exit':
 
-                print("Thank you, come again soon")
+                print("Goodbye, see you soon")
                 break
 
         else:
-                print("Please use required inputs")
+                print("Please use the given commands to navigate")
 
 if __name__ == '__main__':
     main()
