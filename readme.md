@@ -9,7 +9,7 @@
 #One can navigate through the app via specified commands.
 
 #                    .USING.
-#I created this project using python 3.6 and only works while opened in the terminal.
+I created this project using python 3.6 and only works while opened in the terminal.
 
 # To acquire the app just open my files in a text editor and run them in a python shell in the terminal.
 #For this, just clone the work from https://github.com/CollinsMuiruri/Password or extract the files from the downloaded zip file.
