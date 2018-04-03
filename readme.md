@@ -14,5 +14,8 @@ I created this project using python 3.6 and only works while opened in the termi
  To acquire the app just open my files in a text editor and run them in a python shell in the terminal.
 For this, just clone the work from https://github.com/CollinsMuiruri/Password or extract the files from the downloaded zip file.
 
+Then open the python shell using the user.py file:
+                 python3.6 user.py
+
 #                    .REQUIREMENTS.
 #You will need python 3.6 for the app to work.
