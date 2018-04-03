@@ -21,7 +21,8 @@ def display_credentials():
     return Credentials.display_credentials()
 
 def main():
-    print("Welcome to password where you can save your credentials and retrieve them later.Please input your name")
+    print('''Welcome to password where you can save your credentials and retrieve them later.
+    Please input your name''')
 
     user_name = input()
 
@@ -29,7 +30,12 @@ def main():
     print('\n')
 
     while True:
-        print("This will help you move around: new - creating a new account,display - viewing your contacts,Generate - generating a new password for you,EXIT - exiting the app")
+        print('''
+        This will help you move around:
+        new - creating a new account,
+        display - viewing your contacts,
+        generate - generating a new password for you,
+        exit - exiting the app''')
         initials = input().lower()
 
         if initials =='new':
@@ -42,8 +48,9 @@ def main():
             print("Enter your last name")
             l_name = input()
 
+
             print("Input your phone number")
-            p_number = input()
+            p_number = int(input())
 
             print("Enter your email address")
             e_address = input()
